@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{4E6E9959-E42F-61BD-FB7D-411991252A28}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sc.skyboxes.demo.runtime", "sc.skyboxes.demo.runtime.csproj", "{B656DE83-4C12-13B3-11E3-617AD2364362}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{872EB698-C840-84E7-0D5C-28F828B07A06}"
 EndProject
 Global
@@ -15,6 +17,10 @@ Global
 		{4E6E9959-E42F-61BD-FB7D-411991252A28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E6E9959-E42F-61BD-FB7D-411991252A28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E6E9959-E42F-61BD-FB7D-411991252A28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B656DE83-4C12-13B3-11E3-617AD2364362}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B656DE83-4C12-13B3-11E3-617AD2364362}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B656DE83-4C12-13B3-11E3-617AD2364362}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B656DE83-4C12-13B3-11E3-617AD2364362}.Release|Any CPU.Build.0 = Release|Any CPU
 		{872EB698-C840-84E7-0D5C-28F828B07A06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{872EB698-C840-84E7-0D5C-28F828B07A06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{872EB698-C840-84E7-0D5C-28F828B07A06}.Release|Any CPU.ActiveCfg = Release|Any CPU
