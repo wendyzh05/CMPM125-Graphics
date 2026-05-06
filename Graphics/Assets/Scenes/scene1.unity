@@ -88714,9 +88714,10 @@ MonoBehaviour:
   daySunIntensity: 1.2
   nightSunIntensity: 0.05
   nightLights:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 941235796}
+  - {fileID: 1839572607}
+  - {fileID: 1516182920}
+  - {fileID: 258545535}
 --- !u!4 &417469452
 Transform:
   m_ObjectHideFlags: 0
@@ -90680,7 +90681,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
