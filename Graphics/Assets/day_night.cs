@@ -1,4 +1,6 @@
 using UnityEngine;
+using TMPro;
+using UnityEngine.Rendering;
 
 public class DayNightCycle : MonoBehaviour
 {
@@ -17,6 +19,14 @@ public class DayNightCycle : MonoBehaviour
 
     [Header("Interior / Night Lights")]
     public Light[] nightLights;
+
+    [Header("UI")]
+    public TextMeshProUGUI timeText;
+
+    [Header("Post Processing")]
+    public Volume globalVolume;
+    public VolumeProfile dayProfile;
+    public VolumeProfile nightProfile;
 
     private bool isNight;
 
@@ -47,6 +57,8 @@ public class DayNightCycle : MonoBehaviour
         }
 
         UpdateDayNight();
+
+        UpdateUI();
     }
 
     void UpdateDayNight()
@@ -76,7 +88,33 @@ public class DayNightCycle : MonoBehaviour
                 }
             }
 
+            if (globalVolume != null)
+            {
+                globalVolume.profile = isNight ? nightProfile : dayProfile;
+            }
+            
             DynamicGI.UpdateEnvironment();
+            
         }
     }
+
+    void UpdateUI()
+{
+    float remainingTime;
+
+    if (isNight)
+    {
+        remainingTime = (1f - timeOfDay) * dayLengthSeconds;
+        timeText.text = "Day in: " + Mathf.Ceil(remainingTime) + "s";
+
+        timeText.color = Color.cyan;
+    }
+    else
+    {
+        remainingTime = (0.5f - timeOfDay) * dayLengthSeconds;
+        timeText.text = "Night in: " + Mathf.Ceil(remainingTime) + "s";
+
+        timeText.color = Color.yellow;
+    }
+}
 }
