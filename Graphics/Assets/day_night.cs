@@ -22,6 +22,18 @@ public class DayNightCycle : MonoBehaviour
 
     void Start()
     {
+        isNight = timeOfDay > 0.5f;
+
+        foreach (Light light in nightLights)
+        {
+            if (light != null)
+            {
+                light.enabled = isNight;
+            }
+        }
+
+        RenderSettings.skybox = isNight ? nightSkybox : daySkybox;
+
         UpdateDayNight();
     }
 
